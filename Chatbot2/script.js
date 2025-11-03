@@ -104,19 +104,6 @@ function shree(u) {
     document.querySelector(".bottext").style.display = "none";
     document.querySelector(".botxt").style.display = "block";
      
-
-
-
-
-
-    // a.innerHTML= '<img src="images/load-38_256.gif"  width="30px" height="20px" alt="" class="load">';
-
-    // let ht = a.innerHTML ='<span class="ret"><img src="images/Graident Ai Robot.jpg" class="shreeai" alt="">' + '<img src="images/load-38_256.gif"  width="30px" height="20px" alt="" class="load"></span>';
-             
-
-    // let oi = cretechatbox(ht, "bottext");    
-
-    // c.appendChild(oi);
   }, 1);
   calling(u)
 }
