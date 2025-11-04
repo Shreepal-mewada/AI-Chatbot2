@@ -2,8 +2,6 @@ const container = document.querySelector(".chat-area");
 const input = document.querySelector("#inp");
 const button = document.querySelector("button");
 
-
-
 const initialBotMsg = document.createElement("div");
 initialBotMsg.classList.add("bottext");
 initialBotMsg.innerHTML = `
@@ -11,7 +9,6 @@ initialBotMsg.innerHTML = `
   <span>Hello! How can I help you today?</span>
 `;
 container.appendChild(initialBotMsg);
-
 
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && input.value.trim() !== "") {
@@ -60,7 +57,9 @@ async function callBotAPI(userInput) {
   });
 
   const data = await res.json();
-  const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I didn’t get that.";
+  const replyText =
+    data.candidates?.[0]?.content?.parts?.[0]?.text ||
+    "Sorry, I didn’t get that.";
 
   botReply.innerHTML = `
     <img src="images/Graident Ai Robot.jpg" class="shreeai" alt="">
